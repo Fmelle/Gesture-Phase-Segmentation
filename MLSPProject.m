@@ -16,8 +16,8 @@ fileContainer = struct([]);
 srcFiles = dir('data_files\*.csv');
 for i = 1 : length(srcFiles)
     filename = strcat('data_files\',srcFiles(i).name);
-    fileData = xlsread(filename);
-    fileContainer{i} = fileData;
+    file = xlsread(filename);
+    fileContainer{i} = file;
 end
 
 computationTime = toc;
